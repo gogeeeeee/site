@@ -32,7 +32,7 @@
 
           <a href="cart.html" class="cart-button" aria-label="Кошик">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.3 9.2a1 1 0 001 .8h8.9a1 1 0 001-.76L19 7H7.2l-.45-2.2A1 1 0 005.76 4H3zm5 14.5A1.5 1.5 0 1011 20a1.5 1.5 0 000-3zm8 0A1.5 1.5 0 1019 20a1.5 1.5 0 000-3z"/></svg>
-            <span class="cart-count">2</span>
+            <span class="cart-count">0</span>
           </a>
         </div>
       </div>
@@ -66,32 +66,7 @@
             <h2>Обери потрібне для польоту</h2>
           </div>
 
-          <div class="category-grid">
-            <article class="category-card">
-              <div class="category-card__icon">✈️</div>
-              <h3>FPV-дрони</h3>
-            </article>
-            <article class="category-card">
-              <div class="category-card__icon">⚙️</div>
-              <h3>Мотори</h3>
-            </article>
-            <article class="category-card">
-              <div class="category-card__icon">🧠</div>
-              <h3>Польотні контролери</h3>
-            </article>
-            <article class="category-card">
-              <div class="category-card__icon">📷</div>
-              <h3>Камери та відеопередавачі</h3>
-            </article>
-            <article class="category-card">
-              <div class="category-card__icon">🔋</div>
-              <h3>Акумулятори</h3>
-            </article>
-            <article class="category-card">
-              <div class="category-card__icon">🌀</div>
-              <h3>Пропелери</h3>
-            </article>
-          </div>
+          <div class="category-grid" id="home-categories"></div>
         </div>
       </section>
 
@@ -102,67 +77,7 @@
             <h2>Найпопулярніші рішення</h2>
           </div>
 
-          <div class="product-grid">
-            <article class="product-card">
-              <img src="https://images.unsplash.com/photo-1580910051074-3e8e1a7797b1?auto=format&fit=crop&w=800&q=80" alt="FPV drone" />
-              <div class="product-card__body">
-                <h3>RotorX 5" FPV Drone</h3>
-                <div class="product-card__meta">
-                  <span class="price">16 499 ₴</span>
-                  <span class="rating">★ 4.9</span>
-                </div>
-                <div class="product-card__actions">
-                  <a href="product.html" class="button button--ghost">Детальніше</a>
-                  <button class="button button--primary">У кошик</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&w=800&q=80" alt="Motor" />
-              <div class="product-card__body">
-                <h3>Turbo Motor 2306</h3>
-                <div class="product-card__meta">
-                  <span class="price">2 190 ₴</span>
-                  <span class="rating">★ 4.8</span>
-                </div>
-                <div class="product-card__actions">
-                  <a href="product.html" class="button button--ghost">Детальніше</a>
-                  <button class="button button--primary">У кошик</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Flight controller" />
-              <div class="product-card__body">
-                <h3>Nova F7 FC</h3>
-                <div class="product-card__meta">
-                  <span class="price">4 690 ₴</span>
-                  <span class="rating">★ 5.0</span>
-                </div>
-                <div class="product-card__actions">
-                  <a href="product.html" class="button button--ghost">Детальніше</a>
-                  <button class="button button--primary">У кошик</button>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Camera" />
-              <div class="product-card__body">
-                <h3>Vision HD Camera</h3>
-                <div class="product-card__meta">
-                  <span class="price">3 450 ₴</span>
-                  <span class="rating">★ 4.7</span>
-                </div>
-                <div class="product-card__actions">
-                  <a href="product.html" class="button button--ghost">Детальніше</a>
-                  <button class="button button--primary">У кошик</button>
-                </div>
-              </div>
-            </article>
-          </div>
+          <div class="product-grid" id="featured-products"></div>
         </div>
       </section>
 
@@ -225,5 +140,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/store.js" defer></script>
   </body>
 </html>

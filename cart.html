@@ -30,7 +30,7 @@
           </a>
           <a href="cart.html" class="cart-button" aria-label="Кошик">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.3 9.2a1 1 0 001 .8h8.9a1 1 0 001-.76L19 7H7.2l-.45-2.2A1 1 0 005.76 4H3zm5 14.5A1.5 1.5 0 1011 20a1.5 1.5 0 000-3zm8 0A1.5 1.5 0 1019 20a1.5 1.5 0 000-3z"/></svg>
-            <span class="cart-count">2</span>
+            <span class="cart-count">0</span>
           </a>
         </div>
       </div>
@@ -44,38 +44,8 @@
             <h1>Ваші товари</h1>
           </div>
 
-          <div class="cart-list">
-            <article class="cart-item">
-              <img src="https://images.unsplash.com/photo-1580910051074-3e8e1a7797b1?auto=format&fit=crop&w=800&q=80" alt="RotorX 5 FPV Drone" />
-              <div class="cart-item__info">
-                <h3>RotorX 5" FPV Drone</h3>
-                <p>Потужний дрон для швидких польотів.</p>
-              </div>
-              <div class="cart-item__price">16 499 ₴</div>
-              <div class="quantity-picker quantity-picker--small">
-                <button type="button">-</button>
-                <input type="number" value="1" min="1" />
-                <button type="button">+</button>
-              </div>
-              <div class="cart-item__total">16 499 ₴</div>
-              <button class="remove-button" aria-label="Видалити товар">✕</button>
-            </article>
-
-            <article class="cart-item">
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Nova F7 FC" />
-              <div class="cart-item__info">
-                <h3>Nova F7 FC</h3>
-                <p>Польотний контролер для стабільного керування.</p>
-              </div>
-              <div class="cart-item__price">4 690 ₴</div>
-              <div class="quantity-picker quantity-picker--small">
-                <button type="button">-</button>
-                <input type="number" value="1" min="1" />
-                <button type="button">+</button>
-              </div>
-              <div class="cart-item__total">4 690 ₴</div>
-              <button class="remove-button" aria-label="Видалити товар">✕</button>
-            </article>
+          <div class="cart-list" id="cart-items" aria-live="polite">
+            <p>Завантаження кошика…</p>
           </div>
         </section>
 
@@ -84,15 +54,15 @@
 
           <div class="summary-row">
             <span>Сума товарів</span>
-            <strong>21 189 ₴</strong>
+            <strong id="cart-subtotal">0 ₴</strong>
           </div>
           <div class="summary-row">
             <span>Доставка</span>
-            <strong>199 ₴</strong>
+            <strong id="cart-delivery">0 ₴</strong>
           </div>
           <div class="summary-row summary-row--total">
             <span>Загальна сума</span>
-            <strong>21 388 ₴</strong>
+            <strong id="cart-total">0 ₴</strong>
           </div>
 
           <div class="summary-actions">
@@ -128,5 +98,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/store.js" defer></script>
   </body>
 </html>

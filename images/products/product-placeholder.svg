@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Зображення товару RotorLab">
+  <rect width="800" height="520" fill="#ececec"/>
+  <circle cx="400" cy="260" r="152" fill="#fff" stroke="#d9d9d9" stroke-width="4"/>
+  <path d="M400 190v140m-70-70h140M350 210l100 100m0-100L350 310" stroke="#1b1b1b" stroke-width="17" stroke-linecap="round"/>
+  <circle cx="400" cy="260" r="30" fill="#f5a623"/>
+  <text x="400" y="455" fill="#666" font-family="Arial,sans-serif" font-size="24" text-anchor="middle">ROTORLAB PRODUCT</text>
+</svg>

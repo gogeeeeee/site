@@ -30,7 +30,7 @@
           </a>
           <a href="cart.html" class="cart-button" aria-label="Кошик">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.3 9.2a1 1 0 001 .8h8.9a1 1 0 001-.76L19 7H7.2l-.45-2.2A1 1 0 005.76 4H3zm5 14.5A1.5 1.5 0 1011 20a1.5 1.5 0 000-3zm8 0A1.5 1.5 0 1019 20a1.5 1.5 0 000-3z"/></svg>
-            <span class="cart-count">2</span>
+            <span class="cart-count">0</span>
           </a>
         </div>
       </div>
@@ -45,158 +45,51 @@
 
         <section class="catalog-toolbar">
           <div class="search-box">
-            <input type="text" placeholder="Пошук товару..." />
+            <input id="product-search" type="search" placeholder="Пошук товару..." />
           </div>
 
           <div class="catalog-toolbar__filters">
             <label>
               <span>Категорія</span>
-              <select>
-                <option>Усі</option>
-                <option>FPV-дрони</option>
-                <option>Мотори</option>
-                <option>Польотні контролери</option>
+              <select id="category-filter">
+                <option value="">Усі категорії</option>
               </select>
             </label>
 
             <label>
               <span>Мін. ціна</span>
-              <input type="number" value="1000" />
+              <input id="min-price" type="number" min="0" placeholder="Будь-яка" />
             </label>
 
             <label>
               <span>Макс. ціна</span>
-              <input type="number" value="20000" />
+              <input id="max-price" type="number" min="0" placeholder="Будь-яка" />
             </label>
 
             <label>
               <span>Виробник</span>
-              <select>
-                <option>Усі</option>
-                <option>RotorLab</option>
-                <option>GEPRC</option>
-                <option>Hobbywing</option>
+              <select id="manufacturer-filter">
+                <option value="">Усі виробники</option>
               </select>
             </label>
           </div>
         </section>
 
         <section class="sort-row">
-          <span>Показано 12 товарів</span>
+          <span id="product-count" aria-live="polite">Завантаження товарів…</span>
           <label>
             <span>Сортування:</span>
-            <select>
-              <option>За популярністю</option>
-              <option>За зростанням ціни</option>
-              <option>За спаданням ціни</option>
+            <select id="sort-products">
+              <option value="popular">За популярністю</option>
+              <option value="price-asc">За зростанням ціни</option>
+              <option value="price-desc">За спаданням ціни</option>
             </select>
           </label>
         </section>
 
-        <section class="catalog-grid">
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1580910051074-3e8e1a7797b1?auto=format&fit=crop&w=800&q=80" alt="FPV drone" />
-            <div class="product-card__body">
-              <h3>RotorX 5" FPV Drone</h3>
-              <p class="product-card__text">Підходить для швидких поїздок і тривалих навчальних сесій.</p>
-              <div class="product-card__meta">
-                <span class="price">16 499 ₴</span>
-                <span class="rating">★ 4.9</span>
-              </div>
-              <div class="product-card__actions">
-                <a href="product.html" class="button button--ghost">Детальніше</a>
-                <button class="button button--primary">У кошик</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&w=800&q=80" alt="Motor" />
-            <div class="product-card__body">
-              <h3>Turbo Motor 2306</h3>
-              <p class="product-card__text">Висока ефективність, стабільна робота та низький рівень шуму.</p>
-              <div class="product-card__meta">
-                <span class="price">2 190 ₴</span>
-                <span class="rating">★ 4.8</span>
-              </div>
-              <div class="product-card__actions">
-                <a href="product.html" class="button button--ghost">Детальніше</a>
-                <button class="button button--primary">У кошик</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Flight controller" />
-            <div class="product-card__body">
-              <h3>Nova F7 FC</h3>
-              <p class="product-card__text">Потужний політний контролер для точного керування напругою.</p>
-              <div class="product-card__meta">
-                <span class="price">4 690 ₴</span>
-                <span class="rating">★ 5.0</span>
-              </div>
-              <div class="product-card__actions">
-                <a href="product.html" class="button button--ghost">Детальніше</a>
-                <button class="button button--primary">У кошик</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Camera" />
-            <div class="product-card__body">
-              <h3>Vision HD Camera</h3>
-              <p class="product-card__text">Яскраве відео, стабільне передавання та чітка деталізація.</p>
-              <div class="product-card__meta">
-                <span class="price">3 450 ₴</span>
-                <span class="rating">★ 4.7</span>
-              </div>
-              <div class="product-card__actions">
-                <a href="product.html" class="button button--ghost">Детальніше</a>
-                <button class="button button--primary">У кошик</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" alt="Battery" />
-            <div class="product-card__body">
-              <h3>Volt 6S 1300mAh</h3>
-              <p class="product-card__text">Легкий акумулятор з високою енергоємністю для занять у польоті.</p>
-              <div class="product-card__meta">
-                <span class="price">2 890 ₴</span>
-                <span class="rating">★ 4.9</span>
-              </div>
-              <div class="product-card__actions">
-                <a href="product.html" class="button button--ghost">Детальніше</a>
-                <button class="button button--primary">У кошик</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="Propellers" />
-            <div class="product-card__body">
-              <h3>AirFlow Pro 5"</h3>
-              <p class="product-card__text">Стабільний контроль, оптимізований під швидкі маневри.</p>
-              <div class="product-card__meta">
-                <span class="price">560 ₴</span>
-                <span class="rating">★ 4.6</span>
-              </div>
-              <div class="product-card__actions">
-                <a href="product.html" class="button button--ghost">Детальніше</a>
-                <button class="button button--primary">У кошик</button>
-              </div>
-            </div>
-          </article>
+        <section class="catalog-grid" id="catalog-products" aria-live="polite">
+          <p>Завантаження товарів…</p>
         </section>
-
-        <nav class="pagination" aria-label="Навігація сторінок">
-          <a href="#" class="pagination__item active">1</a>
-          <a href="#" class="pagination__item">2</a>
-          <a href="#" class="pagination__item">3</a>
-          <a href="#" class="pagination__item">Далі</a>
-        </nav>
       </div>
     </main>
 
@@ -225,5 +118,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/store.js" defer></script>
   </body>
 </html>
