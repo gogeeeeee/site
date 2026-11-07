@@ -22,11 +22,12 @@
         </nav>
 
         <div class="header__actions">
-          <button class="icon-button" aria-label="Пошук">
+          <button class="icon-button search-trigger" type="button" aria-label="Пошук" aria-haspopup="dialog">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3a7 7 0 015.5 11.9l4.4 4.4 1.4-1.4-4.4-4.4A7 7 0 0110 3zm0 2a5 5 0 100 10 5 5 0 000-10z"/></svg>
           </button>
-          <a href="favorites.html" class="icon-button" aria-label="Обране">
+          <a href="favorites.html" class="icon-button favorites-link" aria-label="Обране">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 016.5 4c1.74 0 3.41.81 4.5 2.09A6.15 6.15 0 0115.5 4 4.5 4.5 0 0120 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span class="favorites-count" aria-hidden="true">0</span>
           </a>
           <a href="cart.html" class="cart-button" aria-label="Кошик">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.3 9.2a1 1 0 001 .8h8.9a1 1 0 001-.76L19 7H7.2l-.45-2.2A1 1 0 005.76 4H3zm5 14.5A1.5 1.5 0 1011 20a1.5 1.5 0 000-3zm8 0A1.5 1.5 0 1019 20a1.5 1.5 0 000-3z"/></svg>
@@ -44,85 +45,70 @@
             <h1>Оформлення замовлення</h1>
           </div>
 
-          <form class="checkout-form">
-            <div class="form-group">
-              <label>Ім'я та прізвище
-                <input type="text" placeholder="Введіть ваше ім'я" />
-              </label>
-            </div>
+          <form class="checkout-form" id="checkout-form">
+            <label>Ім'я та прізвище
+              <input name="name" type="text" autocomplete="name" placeholder="Введіть ваше ім'я" minlength="2" maxlength="100" required />
+            </label>
 
             <div class="form-grid">
               <label>Номер телефону
-                <input type="tel" placeholder="+38 (099) 123 45 67" />
+                <input name="phone" type="tel" autocomplete="tel" placeholder="+380991234567" minlength="10" maxlength="20" required />
               </label>
-              <label>Електронна пошта
-                <input type="email" placeholder="example@mail.com" />
+              <label>Електронна пошта (необов'язково)
+                <input name="email" type="email" autocomplete="email" placeholder="example@mail.com" maxlength="254" />
               </label>
             </div>
 
             <div class="form-grid">
               <label>Місто
-                <input type="text" placeholder="Київ" />
+                <input name="city" type="text" autocomplete="address-level2" placeholder="Київ" maxlength="100" required />
               </label>
               <label>Спосіб доставки
-                <select>
-                  <option>Нова пошта</option>
-                  <option>Укрпошта</option>
-                  <option>Самовивіз</option>
+                <select name="delivery" id="delivery-method" required>
+                  <option value="nova_poshta">Нова пошта</option>
+                  <option value="ukrposhta">Укрпошта</option>
+                  <option value="pickup">Самовивіз</option>
                 </select>
               </label>
             </div>
 
-            <label>Відділення / адреса
-              <input type="text" placeholder="№12, вул. Пушкіна" />
+            <label id="delivery-address-label">Відділення / адреса
+              <input name="address" id="delivery-address" type="text" autocomplete="street-address" placeholder="№12 або адреса відділення" maxlength="200" required />
             </label>
 
             <fieldset class="payment-methods">
               <legend>Спосіб оплати</legend>
-
               <label class="radio-option">
-                <input type="radio" name="payment" checked />
+                <input type="radio" name="payment" value="cash_on_delivery" checked />
                 <span>Оплата при отриманні</span>
               </label>
-
               <label class="radio-option">
-                <input type="radio" name="payment" />
-                <span>Оплата карткою</span>
-              </label>
-
-              <label class="radio-option">
-                <input type="radio" name="payment" />
-                <span>Apple Pay / Google Pay</span>
+                <input type="radio" name="payment" value="bank_transfer" />
+                <span>Банківський переказ після підтвердження</span>
               </label>
             </fieldset>
+
+            <button type="submit" class="button button--primary button--full" id="place-order-button">Підтвердити замовлення</button>
+            <p id="checkout-status" role="status" aria-live="polite"></p>
           </form>
         </section>
 
         <aside class="summary-card summary-card--checkout">
           <h2>Ваше замовлення</h2>
 
-          <div class="summary-item">
-            <span>RotorX 5" FPV Drone</span>
-            <strong>16 499 ₴</strong>
-          </div>
-          <div class="summary-item">
-            <span>Nova F7 FC</span>
-            <strong>4 690 ₴</strong>
-          </div>
+          <div id="checkout-items" aria-live="polite"></div>
           <div class="summary-row">
             <span>Сума</span>
-            <strong>21 189 ₴</strong>
+            <strong id="checkout-subtotal">0 ₴</strong>
           </div>
           <div class="summary-row">
             <span>Доставка</span>
-            <strong>199 ₴</strong>
+            <strong id="checkout-delivery">0 ₴</strong>
           </div>
           <div class="summary-row summary-row--total">
             <span>Разом</span>
-            <strong>21 388 ₴</strong>
+            <strong id="checkout-total">0 ₴</strong>
           </div>
-
-          <button class="button button--primary button--full">Підтвердити замовлення</button>
         </aside>
       </div>
     </main>

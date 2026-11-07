@@ -22,12 +22,13 @@
         </nav>
 
         <div class="header__actions">
-          <button class="icon-button" aria-label="Пошук">
+          <button class="icon-button search-trigger" type="button" aria-label="Пошук" aria-haspopup="dialog">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3a7 7 0 015.5 11.9l4.4 4.4 1.4-1.4-4.4-4.4A7 7 0 0110 3zm0 2a5 5 0 100 10 5 5 0 000-10z"/></svg>
           </button>
 
-          <a href="favorites.html" class="icon-button" aria-label="Обране">
+          <a href="favorites.html" class="icon-button favorites-link" aria-label="Обране">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 016.5 4c1.74 0 3.41.81 4.5 2.09A6.15 6.15 0 0115.5 4 4.5 4.5 0 0120 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span class="favorites-count" aria-hidden="true">0</span>
           </a>
 
           <a href="cart.html" class="cart-button" aria-label="Кошик">
@@ -90,17 +91,17 @@
 
           <div class="benefits-grid">
             <article class="benefit-item">
-              <div class="benefit-item__icon">🚚</div>
+              <div class="benefit-item__icon" aria-hidden="true">01</div>
               <h3>Швидка доставка</h3>
               <p>Доставляємо замовлення по Україні в найкоротші терміни.</p>
             </article>
             <article class="benefit-item">
-              <div class="benefit-item__icon">🛡️</div>
+              <div class="benefit-item__icon" aria-hidden="true">02</div>
               <h3>Гарантія</h3>
               <p>Оригінальний товар з гарантією та перевіркою перед відправкою.</p>
             </article>
             <article class="benefit-item">
-              <div class="benefit-item__icon">💬</div>
+              <div class="benefit-item__icon" aria-hidden="true">03</div>
               <h3>Підтримка</h3>
               <p>Консультації про підбір компонентів та налаштування обладнання.</p>
             </article>
