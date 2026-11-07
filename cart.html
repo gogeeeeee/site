@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RotorLab | Кошик</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo">Rotor<span>Lab</span></a>
+
+        <nav class="nav" aria-label="Навігація">
+          <a href="index.html" class="nav__link">Головна</a>
+          <a href="catalog.html" class="nav__link">Каталог</a>
+          <a href="about.html" class="nav__link">Про нас</a>
+          <a href="contacts.html" class="nav__link">Контакти</a>
+        </nav>
+
+        <div class="header__actions">
+          <button class="icon-button" aria-label="Пошук">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3a7 7 0 015.5 11.9l4.4 4.4 1.4-1.4-4.4-4.4A7 7 0 0110 3zm0 2a5 5 0 100 10 5 5 0 000-10z"/></svg>
+          </button>
+          <a href="favorites.html" class="icon-button" aria-label="Обране">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 016.5 4c1.74 0 3.41.81 4.5 2.09A6.15 6.15 0 0115.5 4 4.5 4.5 0 0120 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </a>
+          <a href="cart.html" class="cart-button" aria-label="Кошик">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.3 9.2a1 1 0 001 .8h8.9a1 1 0 001-.76L19 7H7.2l-.45-2.2A1 1 0 005.76 4H3zm5 14.5A1.5 1.5 0 1011 20a1.5 1.5 0 000-3zm8 0A1.5 1.5 0 1019 20a1.5 1.5 0 000-3z"/></svg>
+            <span class="cart-count">2</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container cart-layout">
+        <section class="cart section">
+          <div class="section-heading section-heading--left">
+            <p class="eyebrow">Кошик</p>
+            <h1>Ваші товари</h1>
+          </div>
+
+          <div class="cart-list">
+            <article class="cart-item">
+              <img src="https://images.unsplash.com/photo-1580910051074-3e8e1a7797b1?auto=format&fit=crop&w=800&q=80" alt="RotorX 5 FPV Drone" />
+              <div class="cart-item__info">
+                <h3>RotorX 5" FPV Drone</h3>
+                <p>Потужний дрон для швидких польотів.</p>
+              </div>
+              <div class="cart-item__price">16 499 ₴</div>
+              <div class="quantity-picker quantity-picker--small">
+                <button type="button">-</button>
+                <input type="number" value="1" min="1" />
+                <button type="button">+</button>
+              </div>
+              <div class="cart-item__total">16 499 ₴</div>
+              <button class="remove-button" aria-label="Видалити товар">✕</button>
+            </article>
+
+            <article class="cart-item">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Nova F7 FC" />
+              <div class="cart-item__info">
+                <h3>Nova F7 FC</h3>
+                <p>Польотний контролер для стабільного керування.</p>
+              </div>
+              <div class="cart-item__price">4 690 ₴</div>
+              <div class="quantity-picker quantity-picker--small">
+                <button type="button">-</button>
+                <input type="number" value="1" min="1" />
+                <button type="button">+</button>
+              </div>
+              <div class="cart-item__total">4 690 ₴</div>
+              <button class="remove-button" aria-label="Видалити товар">✕</button>
+            </article>
+          </div>
+        </section>
+
+        <aside class="summary-card">
+          <h2>Підсумок</h2>
+
+          <div class="summary-row">
+            <span>Сума товарів</span>
+            <strong>21 189 ₴</strong>
+          </div>
+          <div class="summary-row">
+            <span>Доставка</span>
+            <strong>199 ₴</strong>
+          </div>
+          <div class="summary-row summary-row--total">
+            <span>Загальна сума</span>
+            <strong>21 388 ₴</strong>
+          </div>
+
+          <div class="summary-actions">
+            <a href="catalog.html" class="button button--ghost">Продовжити покупки</a>
+            <a href="checkout.html" class="button button--primary">Оформити замовлення</a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <div>
+          <a href="index.html" class="logo footer__logo">Rotor<span>Lab</span></a>
+          <p>FPV-магазин для тих, хто любить швидкість і контроль.</p>
+        </div>
+
+        <div>
+          <h3>Контакти</h3>
+          <ul class="footer__list">
+            <li><a href="mailto:hello@rotorlab.ua">hello@rotorlab.ua</a></li>
+            <li><a href="tel:+380991234567">+38 (099) 123-45-67</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Соціальні мережі</h3>
+          <ul class="footer__list">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

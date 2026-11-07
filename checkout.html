@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RotorLab | Оформлення замовлення</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo">Rotor<span>Lab</span></a>
+
+        <nav class="nav" aria-label="Навігація">
+          <a href="index.html" class="nav__link">Головна</a>
+          <a href="catalog.html" class="nav__link">Каталог</a>
+          <a href="about.html" class="nav__link">Про нас</a>
+          <a href="contacts.html" class="nav__link">Контакти</a>
+        </nav>
+
+        <div class="header__actions">
+          <button class="icon-button" aria-label="Пошук">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3a7 7 0 015.5 11.9l4.4 4.4 1.4-1.4-4.4-4.4A7 7 0 0110 3zm0 2a5 5 0 100 10 5 5 0 000-10z"/></svg>
+          </button>
+          <a href="favorites.html" class="icon-button" aria-label="Обране">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 016.5 4c1.74 0 3.41.81 4.5 2.09A6.15 6.15 0 0115.5 4 4.5 4.5 0 0120 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </a>
+          <a href="cart.html" class="cart-button" aria-label="Кошик">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.3 9.2a1 1 0 001 .8h8.9a1 1 0 001-.76L19 7H7.2l-.45-2.2A1 1 0 005.76 4H3zm5 14.5A1.5 1.5 0 1011 20a1.5 1.5 0 000-3zm8 0A1.5 1.5 0 1019 20a1.5 1.5 0 000-3z"/></svg>
+            <span class="cart-count">2</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container checkout-layout">
+        <section class="checkout section">
+          <div class="section-heading section-heading--left">
+            <p class="eyebrow">Оформлення</p>
+            <h1>Оформлення замовлення</h1>
+          </div>
+
+          <form class="checkout-form">
+            <div class="form-group">
+              <label>Ім'я та прізвище
+                <input type="text" placeholder="Введіть ваше ім'я" />
+              </label>
+            </div>
+
+            <div class="form-grid">
+              <label>Номер телефону
+                <input type="tel" placeholder="+38 (099) 123 45 67" />
+              </label>
+              <label>Електронна пошта
+                <input type="email" placeholder="example@mail.com" />
+              </label>
+            </div>
+
+            <div class="form-grid">
+              <label>Місто
+                <input type="text" placeholder="Київ" />
+              </label>
+              <label>Спосіб доставки
+                <select>
+                  <option>Нова пошта</option>
+                  <option>Укрпошта</option>
+                  <option>Самовивіз</option>
+                </select>
+              </label>
+            </div>
+
+            <label>Відділення / адреса
+              <input type="text" placeholder="№12, вул. Пушкіна" />
+            </label>
+
+            <fieldset class="payment-methods">
+              <legend>Спосіб оплати</legend>
+
+              <label class="radio-option">
+                <input type="radio" name="payment" checked />
+                <span>Оплата при отриманні</span>
+              </label>
+
+              <label class="radio-option">
+                <input type="radio" name="payment" />
+                <span>Оплата карткою</span>
+              </label>
+
+              <label class="radio-option">
+                <input type="radio" name="payment" />
+                <span>Apple Pay / Google Pay</span>
+              </label>
+            </fieldset>
+          </form>
+        </section>
+
+        <aside class="summary-card summary-card--checkout">
+          <h2>Ваше замовлення</h2>
+
+          <div class="summary-item">
+            <span>RotorX 5" FPV Drone</span>
+            <strong>16 499 ₴</strong>
+          </div>
+          <div class="summary-item">
+            <span>Nova F7 FC</span>
+            <strong>4 690 ₴</strong>
+          </div>
+          <div class="summary-row">
+            <span>Сума</span>
+            <strong>21 189 ₴</strong>
+          </div>
+          <div class="summary-row">
+            <span>Доставка</span>
+            <strong>199 ₴</strong>
+          </div>
+          <div class="summary-row summary-row--total">
+            <span>Разом</span>
+            <strong>21 388 ₴</strong>
+          </div>
+
+          <button class="button button--primary button--full">Підтвердити замовлення</button>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <div>
+          <a href="index.html" class="logo footer__logo">Rotor<span>Lab</span></a>
+          <p>FPV-магазин для тих, хто любить швидкість і контроль.</p>
+        </div>
+
+        <div>
+          <h3>Контакти</h3>
+          <ul class="footer__list">
+            <li><a href="mailto:hello@rotorlab.ua">hello@rotorlab.ua</a></li>
+            <li><a href="tel:+380991234567">+38 (099) 123-45-67</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Соціальні мережі</h3>
+          <ul class="footer__list">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

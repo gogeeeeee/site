@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RotorLab | Каталог</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo">Rotor<span>Lab</span></a>
+
+        <nav class="nav" aria-label="Навігація">
+          <a href="index.html" class="nav__link">Головна</a>
+          <a href="catalog.html" class="nav__link active">Каталог</a>
+          <a href="about.html" class="nav__link">Про нас</a>
+          <a href="contacts.html" class="nav__link">Контакти</a>
+        </nav>
+
+        <div class="header__actions">
+          <button class="icon-button" aria-label="Пошук">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3a7 7 0 015.5 11.9l4.4 4.4 1.4-1.4-4.4-4.4A7 7 0 0110 3zm0 2a5 5 0 100 10 5 5 0 000-10z"/></svg>
+          </button>
+          <a href="favorites.html" class="icon-button" aria-label="Обране">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5A4.5 4.5 0 016.5 4c1.74 0 3.41.81 4.5 2.09A6.15 6.15 0 0115.5 4 4.5 4.5 0 0120 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </a>
+          <a href="cart.html" class="cart-button" aria-label="Кошик">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.3 9.2a1 1 0 001 .8h8.9a1 1 0 001-.76L19 7H7.2l-.45-2.2A1 1 0 005.76 4H3zm5 14.5A1.5 1.5 0 1011 20a1.5 1.5 0 000-3zm8 0A1.5 1.5 0 1019 20a1.5 1.5 0 000-3z"/></svg>
+            <span class="cart-count">2</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="container">
+        <section class="catalog-header section">
+          <p class="eyebrow">Каталог</p>
+          <h1>Каталог товарів</h1>
+        </section>
+
+        <section class="catalog-toolbar">
+          <div class="search-box">
+            <input type="text" placeholder="Пошук товару..." />
+          </div>
+
+          <div class="catalog-toolbar__filters">
+            <label>
+              <span>Категорія</span>
+              <select>
+                <option>Усі</option>
+                <option>FPV-дрони</option>
+                <option>Мотори</option>
+                <option>Польотні контролери</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Мін. ціна</span>
+              <input type="number" value="1000" />
+            </label>
+
+            <label>
+              <span>Макс. ціна</span>
+              <input type="number" value="20000" />
+            </label>
+
+            <label>
+              <span>Виробник</span>
+              <select>
+                <option>Усі</option>
+                <option>RotorLab</option>
+                <option>GEPRC</option>
+                <option>Hobbywing</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="sort-row">
+          <span>Показано 12 товарів</span>
+          <label>
+            <span>Сортування:</span>
+            <select>
+              <option>За популярністю</option>
+              <option>За зростанням ціни</option>
+              <option>За спаданням ціни</option>
+            </select>
+          </label>
+        </section>
+
+        <section class="catalog-grid">
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1580910051074-3e8e1a7797b1?auto=format&fit=crop&w=800&q=80" alt="FPV drone" />
+            <div class="product-card__body">
+              <h3>RotorX 5" FPV Drone</h3>
+              <p class="product-card__text">Підходить для швидких поїздок і тривалих навчальних сесій.</p>
+              <div class="product-card__meta">
+                <span class="price">16 499 ₴</span>
+                <span class="rating">★ 4.9</span>
+              </div>
+              <div class="product-card__actions">
+                <a href="product.html" class="button button--ghost">Детальніше</a>
+                <button class="button button--primary">У кошик</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?auto=format&fit=crop&w=800&q=80" alt="Motor" />
+            <div class="product-card__body">
+              <h3>Turbo Motor 2306</h3>
+              <p class="product-card__text">Висока ефективність, стабільна робота та низький рівень шуму.</p>
+              <div class="product-card__meta">
+                <span class="price">2 190 ₴</span>
+                <span class="rating">★ 4.8</span>
+              </div>
+              <div class="product-card__actions">
+                <a href="product.html" class="button button--ghost">Детальніше</a>
+                <button class="button button--primary">У кошик</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Flight controller" />
+            <div class="product-card__body">
+              <h3>Nova F7 FC</h3>
+              <p class="product-card__text">Потужний політний контролер для точного керування напругою.</p>
+              <div class="product-card__meta">
+                <span class="price">4 690 ₴</span>
+                <span class="rating">★ 5.0</span>
+              </div>
+              <div class="product-card__actions">
+                <a href="product.html" class="button button--ghost">Детальніше</a>
+                <button class="button button--primary">У кошик</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Camera" />
+            <div class="product-card__body">
+              <h3>Vision HD Camera</h3>
+              <p class="product-card__text">Яскраве відео, стабільне передавання та чітка деталізація.</p>
+              <div class="product-card__meta">
+                <span class="price">3 450 ₴</span>
+                <span class="rating">★ 4.7</span>
+              </div>
+              <div class="product-card__actions">
+                <a href="product.html" class="button button--ghost">Детальніше</a>
+                <button class="button button--primary">У кошик</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" alt="Battery" />
+            <div class="product-card__body">
+              <h3>Volt 6S 1300mAh</h3>
+              <p class="product-card__text">Легкий акумулятор з високою енергоємністю для занять у польоті.</p>
+              <div class="product-card__meta">
+                <span class="price">2 890 ₴</span>
+                <span class="rating">★ 4.9</span>
+              </div>
+              <div class="product-card__actions">
+                <a href="product.html" class="button button--ghost">Детальніше</a>
+                <button class="button button--primary">У кошик</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="Propellers" />
+            <div class="product-card__body">
+              <h3>AirFlow Pro 5"</h3>
+              <p class="product-card__text">Стабільний контроль, оптимізований під швидкі маневри.</p>
+              <div class="product-card__meta">
+                <span class="price">560 ₴</span>
+                <span class="rating">★ 4.6</span>
+              </div>
+              <div class="product-card__actions">
+                <a href="product.html" class="button button--ghost">Детальніше</a>
+                <button class="button button--primary">У кошик</button>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <nav class="pagination" aria-label="Навігація сторінок">
+          <a href="#" class="pagination__item active">1</a>
+          <a href="#" class="pagination__item">2</a>
+          <a href="#" class="pagination__item">3</a>
+          <a href="#" class="pagination__item">Далі</a>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <div>
+          <a href="index.html" class="logo footer__logo">Rotor<span>Lab</span></a>
+          <p>FPV-магазин для тих, хто любить швидкість і контроль.</p>
+        </div>
+
+        <div>
+          <h3>Контакти</h3>
+          <ul class="footer__list">
+            <li><a href="mailto:hello@rotorlab.ua">hello@rotorlab.ua</a></li>
+            <li><a href="tel:+380991234567">+38 (099) 123-45-67</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Соціальні мережі</h3>
+          <ul class="footer__list">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
